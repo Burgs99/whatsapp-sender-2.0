@@ -1,0 +1,155 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\connection_manager.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|solutionrelative:ConnectWhatsAppPage\\connection_manager.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\connect_whatsapp_gui.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|solutionrelative:ConnectWhatsAppPage\\connect_whatsapp_gui.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|solutionrelative:ConnectWhatsAppPage\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\.env.example||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|solutionrelative:ConnectWhatsAppPage\\.env.example||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\whatsapp_web_manager.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|solutionrelative:ConnectWhatsAppPage\\whatsapp_web_manager.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\db_manager.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|solutionrelative:ConnectWhatsAppPage\\db_manager.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\ConnectWhatsAppPage.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|solutionrelative:ConnectWhatsAppPage\\ConnectWhatsAppPage.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{AAAC999E-0C57-4D5C-A212-A14D93F04A67}|ConnectWhatsAppPage\\ConnectWhatsAppPage.pyproj|solutionrelative:ConnectWhatsAppPage\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": ".env",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\.env",
+              "RelativeDocumentMoniker": "ConnectWhatsAppPage\\.env",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\.env",
+              "RelativeToolTip": "ConnectWhatsAppPage\\.env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-21T07:39:02.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "whatsapp_web_manager.py",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\whatsapp_web_manager.py",
+              "RelativeDocumentMoniker": "ConnectWhatsAppPage\\whatsapp_web_manager.py",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\whatsapp_web_manager.py",
+              "RelativeToolTip": "ConnectWhatsAppPage\\whatsapp_web_manager.py",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADAAAABUAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVDhPpVMxa1NRFP7ebZLSlgaltNpSVCySRUxL0NAh4FJpHWpxcZAUBEPG/AKHDsVBN5eGrCnoYKCDoDiUCKKBjtZBUZtJ2ojYJr40ue\u002B\u002B47k3VzD0hQr94OOed8853/k47z2cCETk2NAgk8mQDQMhhFjK5/Mb9vEotIDruoEsFovEzVvZbPaWLTcQ9uxCpVLp4l\u002Bk0\u002BlEPB5/wIPm7RVC9uxCMpm0UTdKpRKi0WiCQy3wUt8FCvw7VSNxbRapG4voDwucGgyjXC7bzH84ePt1HysbH/GhWoNstzA1OoSFhZuxQqFg8sfu4FutAd\u002BT8KSEYm7v7GJ0YnLClgYLaAcjU9N4Vx9Dda8OBz7OjwywSNsIXY39vEL7TxWpxv2eO3hWHUZ19xc8ti25UdvXzdpNWH0BDj8JiLOrPXfweOu9mRgRhOXUEPr7IiBfYeacB9HaBNRvQH4f6\u002BlgMERwGxJP7grEoq9shj9Uz\u002BVGpmIi4vXcwdzlcePgzLAuZPiSGw869Jg\u002Biw1Mvw50oLGcuoh71y8h1HwB1Js8UfFLnwScNnBhdYVLWsy1IwK5XM5GHaw9uu0LeSCMddZA32lz7zjOQxMcByK1SPU3O/Rjnai2fkjNz8/5L77TyQJ/AJc67LNf3QeWAAAAAElFTkSuQmCC",
+              "WhenOpened": "2026-06-22T12:35:12.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": ".env.example",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\.env.example",
+              "RelativeDocumentMoniker": "ConnectWhatsAppPage\\.env.example",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\.env.example",
+              "RelativeToolTip": "ConnectWhatsAppPage\\.env.example",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-23T11:07:12.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\.gitignore",
+              "RelativeDocumentMoniker": "ConnectWhatsAppPage\\.gitignore",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\.gitignore",
+              "RelativeToolTip": "ConnectWhatsAppPage\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-06-23T11:06:42.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "connect_whatsapp_gui.py",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\connect_whatsapp_gui.py",
+              "RelativeDocumentMoniker": "ConnectWhatsAppPage\\connect_whatsapp_gui.py",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\connect_whatsapp_gui.py",
+              "RelativeToolTip": "ConnectWhatsAppPage\\connect_whatsapp_gui.py",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAIsAAAANAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVDhPpVMxa1NRFP7ebZLSlgaltNpSVCySRUxL0NAh4FJpHWpxcZAUBEPG/AKHDsVBN5eGrCnoYKCDoDiUCKKBjtZBUZtJ2ojYJr40ue\u002B\u002B47k3VzD0hQr94OOed8853/k47z2cCETk2NAgk8mQDQMhhFjK5/Mb9vEotIDruoEsFovEzVvZbPaWLTcQ9uxCpVLp4l\u002Bk0\u002BlEPB5/wIPm7RVC9uxCMpm0UTdKpRKi0WiCQy3wUt8FCvw7VSNxbRapG4voDwucGgyjXC7bzH84ePt1HysbH/GhWoNstzA1OoSFhZuxQqFg8sfu4FutAd\u002BT8KSEYm7v7GJ0YnLClgYLaAcjU9N4Vx9Dda8OBz7OjwywSNsIXY39vEL7TxWpxv2eO3hWHUZ19xc8ti25UdvXzdpNWH0BDj8JiLOrPXfweOu9mRgRhOXUEPr7IiBfYeacB9HaBNRvQH4f6\u002BlgMERwGxJP7grEoq9shj9Uz\u002BVGpmIi4vXcwdzlcePgzLAuZPiSGw869Jg\u002Biw1Mvw50oLGcuoh71y8h1HwB1Js8UfFLnwScNnBhdYVLWsy1IwK5XM5GHaw9uu0LeSCMddZA32lz7zjOQxMcByK1SPU3O/Rjnai2fkjNz8/5L77TyQJ/AJc67LNf3QeWAAAAAElFTkSuQmCC",
+              "WhenOpened": "2026-06-21T07:37:36.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "connection_manager.py",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\connection_manager.py",
+              "RelativeDocumentMoniker": "ConnectWhatsAppPage\\connection_manager.py",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\connection_manager.py",
+              "RelativeToolTip": "ConnectWhatsAppPage\\connection_manager.py",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEsAAAAaAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVDhPpVMxa1NRFP7ebZLSlgaltNpSVCySRUxL0NAh4FJpHWpxcZAUBEPG/AKHDsVBN5eGrCnoYKCDoDiUCKKBjtZBUZtJ2ojYJr40ue\u002B\u002B47k3VzD0hQr94OOed8853/k47z2cCETk2NAgk8mQDQMhhFjK5/Mb9vEotIDruoEsFovEzVvZbPaWLTcQ9uxCpVLp4l\u002Bk0\u002BlEPB5/wIPm7RVC9uxCMpm0UTdKpRKi0WiCQy3wUt8FCvw7VSNxbRapG4voDwucGgyjXC7bzH84ePt1HysbH/GhWoNstzA1OoSFhZuxQqFg8sfu4FutAd\u002BT8KSEYm7v7GJ0YnLClgYLaAcjU9N4Vx9Dda8OBz7OjwywSNsIXY39vEL7TxWpxv2eO3hWHUZ19xc8ti25UdvXzdpNWH0BDj8JiLOrPXfweOu9mRgRhOXUEPr7IiBfYeacB9HaBNRvQH4f6\u002BlgMERwGxJP7grEoq9shj9Uz\u002BVGpmIi4vXcwdzlcePgzLAuZPiSGw869Jg\u002Biw1Mvw50oLGcuoh71y8h1HwB1Js8UfFLnwScNnBhdYVLWsy1IwK5XM5GHaw9uu0LeSCMddZA32lz7zjOQxMcByK1SPU3O/Rjnai2fkjNz8/5L77TyQJ/AJc67LNf3QeWAAAAAElFTkSuQmCC",
+              "WhenOpened": "2026-06-21T07:37:12.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "db_manager.py",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\db_manager.py",
+              "RelativeDocumentMoniker": "ConnectWhatsAppPage\\db_manager.py",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\db_manager.py",
+              "RelativeToolTip": "ConnectWhatsAppPage\\db_manager.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA1AAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVDhPpVMxa1NRFP7ebZLSlgaltNpSVCySRUxL0NAh4FJpHWpxcZAUBEPG/AKHDsVBN5eGrCnoYKCDoDiUCKKBjtZBUZtJ2ojYJr40ue\u002B\u002B47k3VzD0hQr94OOed8853/k47z2cCETk2NAgk8mQDQMhhFjK5/Mb9vEotIDruoEsFovEzVvZbPaWLTcQ9uxCpVLp4l\u002Bk0\u002BlEPB5/wIPm7RVC9uxCMpm0UTdKpRKi0WiCQy3wUt8FCvw7VSNxbRapG4voDwucGgyjXC7bzH84ePt1HysbH/GhWoNstzA1OoSFhZuxQqFg8sfu4FutAd\u002BT8KSEYm7v7GJ0YnLClgYLaAcjU9N4Vx9Dda8OBz7OjwywSNsIXY39vEL7TxWpxv2eO3hWHUZ19xc8ti25UdvXzdpNWH0BDj8JiLOrPXfweOu9mRgRhOXUEPr7IiBfYeacB9HaBNRvQH4f6\u002BlgMERwGxJP7grEoq9shj9Uz\u002BVGpmIi4vXcwdzlcePgzLAuZPiSGw869Jg\u002Biw1Mvw50oLGcuoh71y8h1HwB1Js8UfFLnwScNnBhdYVLWsy1IwK5XM5GHaw9uu0LeSCMddZA32lz7zjOQxMcByK1SPU3O/Rjnai2fkjNz8/5L77TyQJ/AJc67LNf3QeWAAAAAElFTkSuQmCC",
+              "WhenOpened": "2026-06-21T07:36:56.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConnectWhatsAppPage.py",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\ConnectWhatsAppPage.py",
+              "RelativeDocumentMoniker": "ConnectWhatsAppPage\\ConnectWhatsAppPage.py",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\ConnectWhatsAppPage\\ConnectWhatsAppPage\\ConnectWhatsAppPage.py",
+              "RelativeToolTip": "ConnectWhatsAppPage\\ConnectWhatsAppPage.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVDhPpVMxa1NRFP7ebZLSlgaltNpSVCySRUxL0NAh4FJpHWpxcZAUBEPG/AKHDsVBN5eGrCnoYKCDoDiUCKKBjtZBUZtJ2ojYJr40ue\u002B\u002B47k3VzD0hQr94OOed8853/k47z2cCETk2NAgk8mQDQMhhFjK5/Mb9vEotIDruoEsFovEzVvZbPaWLTcQ9uxCpVLp4l\u002Bk0\u002BlEPB5/wIPm7RVC9uxCMpm0UTdKpRKi0WiCQy3wUt8FCvw7VSNxbRapG4voDwucGgyjXC7bzH84ePt1HysbH/GhWoNstzA1OoSFhZuxQqFg8sfu4FutAd\u002BT8KSEYm7v7GJ0YnLClgYLaAcjU9N4Vx9Dda8OBz7OjwywSNsIXY39vEL7TxWpxv2eO3hWHUZ19xc8ti25UdvXzdpNWH0BDj8JiLOrPXfweOu9mRgRhOXUEPr7IiBfYeacB9HaBNRvQH4f6\u002BlgMERwGxJP7grEoq9shj9Uz\u002BVGpmIi4vXcwdzlcePgzLAuZPiSGw869Jg\u002Biw1Mvw50oLGcuoh71y8h1HwB1Js8UfFLnwScNnBhdYVLWsy1IwK5XM5GHaw9uu0LeSCMddZA32lz7zjOQxMcByK1SPU3O/Rjnai2fkjNz8/5L77TyQJ/AJc67LNf3QeWAAAAAElFTkSuQmCC",
+              "WhenOpened": "2026-06-21T07:35:52.195Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
