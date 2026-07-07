@@ -1,0 +1,6 @@
+.env
+machine_id.txt
+activation_key.txt
+expiry_date.txt
+__pycache__/
+*.pyc
