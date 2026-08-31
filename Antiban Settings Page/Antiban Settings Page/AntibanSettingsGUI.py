@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 
-
+# Builds the antiban settings screen (visible boxes, dropdowns, checkboxes)
 class AntibanSettingsGUI:
     def __init__(self, root):
         self.root = root
@@ -11,7 +11,9 @@ class AntibanSettingsGUI:
 
         self.create_widgets()
 
+    # Builds every visible element on the page
     def create_widgets(self):
+        # Page title
         title_label = tk.Label(
             self.root,
             text="Anti-Ban Settings",
@@ -19,6 +21,7 @@ class AntibanSettingsGUI:
         )
         title_label.pack(pady=15)
 
+        # Page description text
         description_label = tk.Label(
             self.root,
             text="Configure safety settings to reduce WhatsApp account ban risk.",
@@ -29,6 +32,7 @@ class AntibanSettingsGUI:
         main_frame = tk.Frame(self.root, padx=25, pady=15)
         main_frame.pack(fill="both", expand=True)
 
+        # Safty profile dropdown (Conservation, Moderate, Aggressive)
         tk.Label(main_frame, text="Safety Profile", font=("Arial", 11, "bold")).grid(row=0, column=0, sticky="w", pady=8)
 
         self.safety_profile = ttk.Combobox(
@@ -40,22 +44,27 @@ class AntibanSettingsGUI:
         self.safety_profile.grid(row=0, column=1, pady=8, sticky="w")
         self.safety_profile.set("Conservative")
 
+        # Minimum delay between messages input 
         tk.Label(main_frame, text="Minimum Delay (seconds)", font=("Arial", 11)).grid(row=1, column=0, sticky="w", pady=8)
         self.min_delay_entry = tk.Entry(main_frame, width=28)
         self.min_delay_entry.grid(row=1, column=1, pady=8, sticky="w")
 
+        #Maximum delay between messages input
         tk.Label(main_frame, text="Maximum Delay (seconds)", font=("Arial", 11)).grid(row=2, column=0, sticky="w", pady=8)
         self.max_delay_entry = tk.Entry(main_frame, width=28)
         self.max_delay_entry.grid(row=2, column=1, pady=8, sticky="w")
 
+        # Max messages per hour input
         tk.Label(main_frame, text="Max Messages Per Hour", font=("Arial", 11)).grid(row=3, column=0, sticky="w", pady=8)
         self.max_hour_entry = tk.Entry(main_frame, width=28)
         self.max_hour_entry.grid(row=3, column=1, pady=8, sticky="w")
 
+        # Max messages per day input
         tk.Label(main_frame, text="Max Messages Per Day", font=("Arial", 11)).grid(row=4, column=0, sticky="w", pady=8)
         self.max_day_entry = tk.Entry(main_frame, width=28)
         self.max_day_entry.grid(row=4, column=1, pady=8, sticky="w")
 
+        # All of the on and off protection toggles, stored as True/False variables
         self.random_delay_var = tk.BooleanVar(value=True)
         self.auto_pause_var = tk.BooleanVar(value=True)
         self.typing_simulation_var = tk.BooleanVar(value=True)
@@ -63,6 +72,7 @@ class AntibanSettingsGUI:
         self.business_hours_only_var = tk.BooleanVar(value=False)
         self.skip_recent_contacts_var = tk.BooleanVar(value=True)
 
+        # Box that holds all the checkboxes together
         checkbox_frame = tk.LabelFrame(main_frame, text="Protection Options", padx=15, pady=10)
         checkbox_frame.grid(row=5, column=0, columnspan=2, sticky="we", pady=15)
 
@@ -73,6 +83,7 @@ class AntibanSettingsGUI:
         tk.Checkbutton(checkbox_frame, text="Business Hours Only (09:00 - 17:00)", variable=self.business_hours_only_var).pack(anchor="w")
         tk.Checkbutton(checkbox_frame, text="Skip Recent Contacts", variable=self.skip_recent_contacts_var).pack(anchor="w")
 
+        # Risk Level dropdown (Low / Medium / High)
         tk.Label(main_frame, text="Risk Level", font=("Arial", 11, "bold")).grid(row=6, column=0, sticky="w", pady=8)
 
         self.risk_level = ttk.Combobox(
@@ -87,6 +98,7 @@ class AntibanSettingsGUI:
         button_frame = tk.Frame(main_frame)
         button_frame.grid(row=7, column=0, columnspan=2, pady=25)
 
+        # Save button, the controller attaches the actual save logic to this later
         self.save_button = tk.Button(
             button_frame,
             text="Save Settings",
@@ -96,6 +108,7 @@ class AntibanSettingsGUI:
         )
         self.save_button.grid(row=0, column=0, padx=10)
 
+        # Reset button, the controller attaches the actual reset logic
         self.reset_button = tk.Button(
             button_frame,
             text="Reset to Default",
@@ -105,6 +118,7 @@ class AntibanSettingsGUI:
         )
         self.reset_button.grid(row=0, column=1, padx=10)
 
+        # Message shown at the bottom after Save/Reset is clicked
         self.status_label = tk.Label(
             self.root,
             text="",
@@ -113,6 +127,7 @@ class AntibanSettingsGUI:
         )
         self.status_label.pack(pady=10)
 
+    # Resets every field on the screen back to the built in defult values
     def set_default_values(self):
         self.safety_profile.set("Conservative")
         self.min_delay_entry.delete(0, tk.END)
@@ -135,7 +150,8 @@ class AntibanSettingsGUI:
         self.skip_recent_contacts_var.set(True)
         self.risk_level.set("Low")
 
-
+    #Fills the screen with settings loaded from the database.
+    # If there are no saved settings yet it returns to default.
     def load_settings_to_gui(self, settings):
         if not settings:
            self.set_default_values()
