@@ -4,7 +4,7 @@ import os
 
 load_dotenv()
 
-
+# Handles connecting to the database for the Connect WhatsApp page
 class DBManager:
     def __init__(self):
         self.config = {
@@ -14,5 +14,6 @@ class DBManager:
             "database": os.getenv("DB_NAME")
         }
 
+    # Opens and returns a new database connection
     def get_connection(self):
         return mysql.connector.connect(**self.config)
