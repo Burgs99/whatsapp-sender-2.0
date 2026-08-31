@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
+# Handles saving and loading Antiban Settings from the database
 class DBManager:
     def __init__(self):
         self.connection = mysql.connector.connect(
@@ -15,6 +15,7 @@ class DBManager:
             database=os.getenv("DB_NAME")
         )
 
+    #Inserts a new row of Antiban Settings into the database
     def save_antiban_settings(self, settings):
         cursor = self.connection.cursor()
 
@@ -55,6 +56,7 @@ class DBManager:
         self.connection.commit()
         cursor.close()
 
+    # Gets the most recently saved Antiban Settings 
     def get_latest_antiban_settings(self):
         cursor = self.connection.cursor(dictionary=True)
 
@@ -71,6 +73,7 @@ class DBManager:
 
         return result
 
+    # Closes the database connection
     def close_connection(self):
         if self.connection.is_connected():
             self.connection.close()
