@@ -1,12 +1,13 @@
 from playwright.sync_api import sync_playwright
 
-
+# Controls an actual browser window to open and monitor whatsapp Web
 class WhatsAppWebManager:
     def __init__(self):
         self.playwright = None
         self.browser = None
         self.page = None
 
+    # Opens WhatsApp in a browser (Reuses the same page if already open)
     def open_whatsapp_web(self):
         if self.page is not None:
            self.page.goto("https://web.whatsapp.com")
@@ -22,6 +23,7 @@ class WhatsAppWebManager:
         self.page = self.browser.new_page()
         self.page.goto("https://web.whatsapp.com")
 
+    # Closes the browser and shuts down the automation session
     def close_browser(self):
         if self.browser:
             self.browser.close()
@@ -29,6 +31,7 @@ class WhatsAppWebManager:
         if self.playwright:
             self.playwright.stop()
 
+    # Checks whether the WhatsApp Web page shows a logged in chat list
     def is_logged_in(self):
        if self.page is None:
           return False
@@ -39,6 +42,7 @@ class WhatsAppWebManager:
        except:
         return False
 
+    # Starts the "Log in with phone number" flow instead of QR code
     def open_phone_number_linking(self, phone_number):
         self.open_whatsapp_web()
 
