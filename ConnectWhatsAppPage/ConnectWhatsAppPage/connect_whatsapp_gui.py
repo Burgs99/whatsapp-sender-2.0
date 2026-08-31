@@ -3,23 +3,24 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from connection_manager import ConnectionManager
 
-
+# Builds the Connect WhatsApp screen and handles QR code and Phone Number linking
 class ConnectWhatsAppGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("Connect WhatsApp Page")
         self.root.geometry("420x380")
 
-        self.manager = ConnectionManager()
-        self.web_manager = WhatsAppWebManager()
+        self.manager = ConnectionManager()  # Saves/ reads connections from the database
+        self.web_manager = WhatsAppWebManager() # controls the actual browser/ WhatsApp Web session
 
         title_label = tk.Label(root, text="Connect WhatsApp", font=("Arial", 16, "bold"))
         title_label.pack(pady=15)
 
+        # Phone number field, only shown when 'Phone Number' Method is selected
         self.phone_label = tk.Label(root, text="Phone Number:")
         self.phone_entry = tk.Entry(root, width=35)
         
-
+        # Choose QR Code or Phone number as the connection method
         method_label = tk.Label(root, text="Connection Method:")
         method_label.pack()
 
@@ -33,6 +34,7 @@ class ConnectWhatsAppGUI:
         self.method_combo.pack(pady=5)
         self.method_combo.bind("<<ComboboxSelected>>", self.update_method_view)
 
+        #Shows the current connection status
         status_label = tk.Label(root, text="Connection Status:")
         status_label.pack()
 
@@ -52,6 +54,7 @@ class ConnectWhatsAppGUI:
         )
         open_browser_button.pack(pady=5)
 
+        # Checks whether the WhatsApp Web Login actually succeeded
         check_status_button = tk.Button(
         root,
         text="Check Login Status",
@@ -59,7 +62,7 @@ class ConnectWhatsAppGUI:
         )
         check_status_button.pack(pady=5)
 
-
+        # Saves the current connection information to the database
         save_button = tk.Button(root, text="Save Connection", command=self.save_connection)
         save_button.pack(pady=15)
 
@@ -67,6 +70,7 @@ class ConnectWhatsAppGUI:
         self.result_label.pack()
         self.update_method_view()
 
+    # Saves the current connection method and status to the database
     def save_connection(self):
         phone_number = self.phone_entry.get()
         connection_method = self.method_combo.get()
@@ -88,6 +92,7 @@ class ConnectWhatsAppGUI:
 
         self.phone_entry.delete(0, tk.END)
 
+    # Opens WhatsApp Web, using either a QR code or a Phone number login
     def open_whatsapp_web(self):
         connection_method = self.method_combo.get()
         phone_number = self.phone_entry.get()
@@ -108,6 +113,7 @@ class ConnectWhatsAppGUI:
             self.web_manager.open_whatsapp_web()
             self.result_label.config(text="WhatsApp Web opened for QR Code login.")
 
+    # Shows and hides the Phone number input depending on which method is selected
     def update_method_view(self, event=None):
         selected_method = self.method_combo.get()
 
@@ -121,6 +127,7 @@ class ConnectWhatsAppGUI:
            self.phone_label.pack(after=self.method_combo, pady=(10, 0))
            self.phone_entry.pack(after=self.phone_label, pady=5)
 
+    #CHecks if the WhatsApp Web session actually logged in Successfully
     def check_login_status(self):
         connection_method = self.method_combo.get()
         phone_number = self.phone_entry.get()
@@ -133,6 +140,7 @@ class ConnectWhatsAppGUI:
               messagebox.showerror("Error", "Phone number is required.")
               return
 
+            #Login Confirmed, saved as "Connected"
            self.manager.save_connection(phone_number, connection_method, "Connected")
 
            self.status_combo.set("Connected")
