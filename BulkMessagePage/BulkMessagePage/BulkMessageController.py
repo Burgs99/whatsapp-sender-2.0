@@ -1,3 +1,4 @@
+# Connects the Bulk Message screen to the Excel/ Message/ Database logic
 class BulkMessageController:
 
     def __init__(self, excel_manager, message_builder, message_randomizer, db_manager):
@@ -6,12 +7,14 @@ class BulkMessageController:
         self.message_randomizer = message_randomizer
         self.db_manager = db_manager
 
+    #Builds a preview message using the first contact on the list
     def create_preview(self, contacts, message, randomise):
 
         if not contacts:
             raise ValueError("No contacts found.")
 
         if randomise:
+            # Each line typed in the message box counts as a seperate template to pick from
             templates = message.split("\n")
             selected_message = self.message_randomizer.get_random_message(
                 templates
@@ -28,7 +31,7 @@ class BulkMessageController:
 
         return final_message
 
-
+    #Builds and saves one message per contact to the database
     def save_campaign(self, contacts, message, randomise, attachment, min_delay, max_delay):
         saved_count = 0
 
