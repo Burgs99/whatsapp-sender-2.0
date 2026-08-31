@@ -1,10 +1,11 @@
 from db_manager import DBManager
 
-
+# Handles saving and reading Whatsapp connection records in the database
 class ConnectionManager:
     def __init__(self):
         self.db = DBManager()
 
+    # Adds a new connection record to the database
     def save_connection(self, phone_number, connection_method, status):
         connection = self.db.get_connection()
         cursor = connection.cursor()
@@ -23,6 +24,7 @@ class ConnectionManager:
         cursor.close()
         connection.close()
 
+    # Updates the status of one excisting connection by its ID
     def update_connection_status(self, connection_id, status):
         connection = self.db.get_connection()
         cursor = connection.cursor()
@@ -41,6 +43,7 @@ class ConnectionManager:
         cursor.close()
         connection.close()
 
+    # Returns every saved connection record
     def get_all_connections(self):
         connection = self.db.get_connection()
         cursor = connection.cursor(dictionary=True)
@@ -55,6 +58,7 @@ class ConnectionManager:
 
         return results
 
+    # Updates the most recent QR Code connection's status
     def update_latest_qr_connection(self, status):
         connection = self.db.get_connection()
         cursor = connection.cursor()
