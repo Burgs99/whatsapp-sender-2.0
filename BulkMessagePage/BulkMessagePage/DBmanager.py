@@ -3,7 +3,7 @@ import json
 import os
 from dotenv import load_dotenv
 
-
+#Handles saving Bulk Message campaign data to the database
 class DBManager:
     def __init__(self):
         load_dotenv()
@@ -15,6 +15,7 @@ class DBManager:
             database=os.getenv("DB_NAME")
         )
 
+    # Saves one message (for one contact) into the database, it is marked as "Pending"
     def save_bulk_message(self, contact_name, phone_number, variable_data,
                           message_text, attachment, min_delay, max_delay):
         cursor = self.connection.cursor()
@@ -41,6 +42,7 @@ class DBManager:
         self.connection.commit()
         cursor.close()
 
+    # Closes the Database connection
     def close_connection(self):
         if self.connection.is_connected():
             self.connection.close()
