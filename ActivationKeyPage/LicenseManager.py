@@ -5,8 +5,8 @@ from DatabaseManager import DatabaseManager
 class LicenseManager:
 
     def __init__(self):
-        self.key_file = "activation_key.txt"
-        self.expiry_file = "expiry_date.txt"
+        self.key_file = "activation_key.txt"   # Where the key is saved locally
+        self.expiry_file = "expiry_date.txt"   # Where the expiry date is saved locally
         self.database = DatabaseManager()
 
     # Validates the key against the database and saves it locally if successful
@@ -15,21 +15,20 @@ class LicenseManager:
         record = self.database.get_activation_key(key)
 
         if record is None:
-           return False
+           return False # Key does not exist in the database
         
-       # Make sure the key belongs to this machine
         if record["machine_id"] != machine_id:
-           return False
+           return False # If the Key belongs to a different machine
 
 
         if record["status"] != "Active":
-           return False
+           return False # Key has been deactivated or revoked
 
         expires_at = record["expires_at"]
 
-        # Reject if the license has expired
+        
         if expires_at < datetime.now():
-           return False
+           return False # Key has expired
 
         self.save_activation_key(key)
         self.save_expiry_date_from_database(expires_at)
@@ -41,6 +40,7 @@ class LicenseManager:
         with open(self.key_file, "w") as file:
             file.write(key)
 
+    # Checks if a key has been saved locally before
     def has_saved_key(self):
         return os.path.exists(self.key_file)
 
@@ -48,7 +48,8 @@ class LicenseManager:
     def get_saved_key(self):
         with open(self.key_file, "r") as file:
             return file.read()
-
+            
+    # Checks if an expiry date has been saved locally before
     def has_saved_expiry_date(self):
         return os.path.exists(self.expiry_file)
 
