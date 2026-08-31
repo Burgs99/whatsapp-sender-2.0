@@ -8,6 +8,7 @@ from DBmanager import DBManager
 from openpyxl import Workbook
 
 
+#Builds the Bulk Message screen and wires it up to all the supporting logic
 class BulkMessageGUI:
     def __init__(self):
         self.root = tk.Tk()
@@ -31,6 +32,7 @@ class BulkMessageGUI:
         )
         self.contacts = []
 
+    # Builds every visible element on the page
     def create_widgets(self):
         title_label = tk.Label(
             self.root,
@@ -68,6 +70,7 @@ class BulkMessageGUI:
         )
         self.excel_status_label.pack(pady=12)
 
+        #Shows every contact loaded from the Excel file
         self.contact_listbox = tk.Listbox(left_frame, width=38, height=26)
         self.contact_listbox.pack(pady=8)
 
@@ -102,6 +105,7 @@ class BulkMessageGUI:
         )
         self.attachment_label.pack(pady=(0, 12))
 
+        # Turns message randomisation on/off
         self.randomise_var = tk.BooleanVar()
         random_checkbox = tk.Checkbutton(
             center_frame,
@@ -159,6 +163,7 @@ class BulkMessageGUI:
         )
         self.status_label.pack(pady=10)
 
+    #Opens a file picker, reads the chosen Excel file and fills the contact list
     def upload_excel(self):
         file_path = filedialog.askopenfilename(
             title="Select Excel File",
@@ -189,12 +194,14 @@ class BulkMessageGUI:
                 )
 
             except Exception as e:
+                #A broken Excel file, will show an error instead of crashing
                 messagebox.showerror("Excel Error", str(e))
                 self.status_label.config(
                     text="Excel upload failed.",
                     fg="red"
             )
 
+    # Creates and saves a blank example Excel file with the right colum headers
     def download_sample(self):
         file_path = filedialog.asksaveasfilename(
             title="Save Sample Excel",
@@ -228,6 +235,7 @@ class BulkMessageGUI:
             fg="green"
         )
 
+    # Opens a file picker so the user can attach a file/image to the message
     def add_attachment(self):
         file_path = filedialog.askopenfilename(
             title="Select Attachment"
@@ -238,27 +246,33 @@ class BulkMessageGUI:
             self.attachment_label.config(text="Attachment selected", fg="green")
             self.status_label.config(text="Attachment added successfully.", fg="green")
 
+    # Validates all the inputs, shows a preview, then saves the whole campaign
     def start_campaign(self):
         message = self.message_text.get("1.0", tk.END).strip()
         min_delay = self.min_delay_entry.get().strip()
         max_delay = self.max_delay_entry.get().strip()
 
+        #Must have an Excel file uploaded
         if not self.excel_file_path:
             messagebox.showerror("Error", "Please upload an Excel file first.")
             return
 
+        #Must have a message typed
         if not message:
             messagebox.showerror("Error", "Please enter a message.")
             return
 
+        #Delay fields must actually be numbers
         if not min_delay.isdigit() or not max_delay.isdigit():
             messagebox.showerror("Error", "Delay values must be numbers.")
             return
 
+        #Minimum delay cannot be bigger than the maximum delay
         if int(min_delay) > int(max_delay):
             messagebox.showerror("Error", "Min delay cannot be greater than max delay.")
             return
 
+        # Shows the user a preview of what the message will look like for the first contact
         final_message = self.controller.create_preview(
              self.contacts,
              message,
@@ -270,6 +284,7 @@ class BulkMessageGUI:
              final_message
         )
 
+        # Save one message per contact to the database, ready to be sent
         saved_count = self.controller.save_campaign(
            self.contacts,
            message,
@@ -289,6 +304,7 @@ class BulkMessageGUI:
             fg="green"
         )
 
+    # Resets every Field back to default, ready for a new campaign
     def clear_form(self):
         self.excel_file_path = None
         self.attachment_path = None
@@ -308,5 +324,6 @@ class BulkMessageGUI:
         self.randomise_var.set(False)
         self.status_label.config(text="Ready", fg="green")
 
+    # Opens the window and keeps it running
     def run(self):
         self.root.mainloop()
