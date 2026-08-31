@@ -9,7 +9,6 @@ license_manager = LicenseManager()
 machine_id = machine.generate_machine_id() #Gets this PC's permanant Machine ID
 
 # Validates the entered key and updates the UI based on the result
-#DEPLOYMENT PLAN: this function implements the TC-002 and TC-003
 def activate_key():
     key = key_entry.get().strip()
 
@@ -18,12 +17,12 @@ def activate_key():
         return
 
     if license_manager.validate_key(key, machine_id):
-        #Showes success + license details (TC-002)
+        #When key is valid, it shows success and license details
         status_value.config(text="Activation Successful", fg="green")
         days_value.config(text=f"Days Left: {license_manager.get_days_left()}")
         license_value.config(text=f"Status: {license_manager.get_status()}")
     else:
-        #Show error and clear old information (TC-003)
+        #Key is invalid or expired, shows error and clear the old information
         status_value.config(text="Invalid Activation Key", fg="red")
         days_value.config(text="")
         license_value.config(text="")
@@ -57,7 +56,6 @@ subtitle_label = tk.Label(
 subtitle_label.pack(pady=(0, 20))
 
 #Machine ID Label
-#Displays the generated system ID
 machine_label = tk.Label(
     window,
     text="Machine ID",
