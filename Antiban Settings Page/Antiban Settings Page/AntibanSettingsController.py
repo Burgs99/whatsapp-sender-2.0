@@ -1,7 +1,7 @@
 from tkinter import messagebox
 from DBManager import DBManager
 
-
+#Connects the antiban settings to the database, it handles what happens a save or reset is clicked
 class AntibanSettingsController:
     def __init__(self, gui):
         self.gui = gui
@@ -10,6 +10,7 @@ class AntibanSettingsController:
         self.gui.save_button.config(command=self.save_settings)
         self.gui.reset_button.config(command=self.reset_settings)
 
+    # Reads the values of the screen, validates them and saves to the database
     def save_settings(self):
         try:
             settings = self.get_settings_from_gui()
@@ -28,6 +29,7 @@ class AntibanSettingsController:
    
 
         except ValueError:
+            # Happens if a number field contains bad data (letters, negatives, etc)
             self.gui.status_label.config(
                 text="Please enter valid numeric values.",
                 fg="red"
@@ -37,7 +39,7 @@ class AntibanSettingsController:
                 "Input Error",
                 "Minimum delay, maximum delay, hourly limit, and daily limit must be numbers."
             )
-
+    # Puts every field back to its default value
     def reset_settings(self):
         self.gui.set_default_values()
 
@@ -46,15 +48,18 @@ class AntibanSettingsController:
             fg="green"
         )
 
+    # Reads all the current values off the screen and checks they make sense
     def get_settings_from_gui(self):
         min_delay = int(self.gui.min_delay_entry.get())
         max_delay = int(self.gui.max_delay_entry.get())
         max_messages_per_hour = int(self.gui.max_hour_entry.get())
         max_messages_per_day = int(self.gui.max_day_entry.get())
 
+        # Numbers cannot be negitive
         if min_delay < 0 or max_delay < 0 or max_messages_per_hour < 0 or max_messages_per_day < 0:
             raise ValueError
 
+        # Minimum delay cannot be bigger than max delay
         if min_delay > max_delay:
             raise ValueError
 
@@ -75,6 +80,7 @@ class AntibanSettingsController:
 
         return settings
 
+    # Loads the most recently saved settings from the database onto the screen
     def load_latest_settings(self):
         settings = self.db.get_latest_antiban_settings()
         self.gui.load_settings_to_gui(settings)
