@@ -1,7 +1,8 @@
 import random
 
-
+# Picks one message template at random out of several options
 class MessageRandomizer:
+    # Removes empty lines, then picks one message template randomly
     def get_random_message(self, messages):
         valid_messages = []
 
