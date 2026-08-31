@@ -27,7 +27,7 @@ tk.Label(root, text="Machine ID").pack() #generate system ID
 machine_id_entry = tk.Entry(root, width=40)
 machine_id_entry.pack(pady=10)
  
-
+#Gets the Machine ID
 machine_id = machine_manager.generate_machine_id()
 machine_id_entry.insert(0, machine_id)
 machine_id_entry.config(state="readonly")  # shown, but not editable by the user
@@ -63,7 +63,8 @@ def activate():
     else:
         messagebox.showerror("Error", "Invalid or expired activation key.")
  
- 
+ # Runs once when the app opens
+#It auto-fills the key if activated before
 def check_existing_activation():
     
     if license_manager.has_saved_key() and license_manager.has_saved_expiry_date():
